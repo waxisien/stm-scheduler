@@ -10,8 +10,7 @@ setup(
     url='http://github.com/waxisien/stm-scheduler',
     install_requires=[
         'Flask==1.0.2',
-        'Flask-SQLAlchemy==2.4.0',
-        'SQLAlchemy==1.3.3',
+        'Flask-Caching==1.7.2',
         'gtfs-realtime-bindings==0.0.5',
         'requests==2.22.0',
     ],

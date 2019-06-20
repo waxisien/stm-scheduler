@@ -1,10 +1,8 @@
 from flask import Blueprint, Flask, jsonify
-from flask_sqlalchemy import SQLAlchemy
 
-from .config import config
-from .schedule import get_schedule
-
-db = SQLAlchemy()
+from stm_scheduler.config import config
+from stm_scheduler.extensions import cache
+from stm_scheduler.schedule import get_schedule
 
 main = Blueprint("main_app", __name__)
 
@@ -19,7 +17,7 @@ def create_app(config_name="development"):
     app = Flask(__name__)
     app.config.from_object(config[config_name])
 
-    db.init_app(app)
+    cache.init_app(app)
 
     app.register_blueprint(main)
 
