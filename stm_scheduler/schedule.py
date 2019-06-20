@@ -9,6 +9,7 @@ from stm_scheduler.extensions import cache
 # sandbox API is limited to 1000 call per day
 GTFS_API_CACHE = 120
 
+
 @cache.cached(timeout=GTFS_API_CACHE)
 def get_schedule(line_id, stop_id):
     headers = {"apikey": current_app.config["STM_GTFS_API_KEY"]}
