@@ -12,6 +12,6 @@ setup(
         'Flask==1.0.2',
         'Flask-Caching==1.7.2',
         'gtfs-realtime-bindings==0.0.5',
-        'requests==2.22.0',
+        'requests==2.31.0',
     ],
 )
